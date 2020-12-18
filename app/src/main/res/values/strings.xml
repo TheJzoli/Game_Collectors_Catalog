@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Game Collector\'s Catalog</string>
+    <string name="arrow_icon">arrow icon</string>
+    <string name="default_image">Default image</string>
+    <string name="add_button">Add manufacturer/console/game button</string>
+    <string name="manufacturer_name">Manufacturer Name</string>
+    <string name="manufacturer_name_hint">e.g. Nintendo</string>
+    <string name="console_name_hint">e.g. Nintendo Switch</string>
+    <string name="btn_cancel_text">Cancel</string>
+    <string name="btn_add_text">Add</string>
+    <string name="console_name">Console Name</string>
+    <string name="game_title">Game Title:</string>
+    <string name="game_title_hint">e.g. Super Mario Bros.</string>
+    <string name="release_date">Release Date:</string>
+    <string name="catalog_date">Catalog Date:</string>
+    <string name="take_image_of_box_art">Take Image of Box Art</string>
+    <string name="textView_image">Image:</string>
+    <string name="notes">Notes:</string>
+    <string name="game_title_temp">Game Title</string>
+    <string name="temp_date">01.01.1900</string>
+    <string name="date_format_hint">dd.mm.yyyy</string>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/manufacturersFragment">
+
+
+    <fragment
+        android:id="@+id/manufacturersFragment"
+        android:name="com.example.gamecollectorscatalog.ManufacturersFragment"
+        android:label="fragment_manufacturers"
+        tools:layout="@layout/fragment_manufacturers" >
+        <!-- all actions will be created programmatically -->
+        <action
+            android:id="@+id/action_manufacturersFragment_to_consolesFragment"
+            app:destination="@id/consolesFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_manufacturersFragment_to_addManufacturerFragment"
+            app:destination="@id/addManufacturerFragment" />
+    </fragment>
+    <!-- fragment content will be created programmatically -->
+    <fragment
+        android:id="@+id/consolesFragment"
+        android:name="com.example.gamecollectorscatalog.ConsolesFragment"
+        android:label="fragment_consoles"
+        tools:layout="@layout/fragment_consoles" >
+        <action
+            android:id="@+id/action_consolesFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_consolesFragment_to_addConsoleFragment"
+            app:destination="@id/addConsoleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.example.gamecollectorscatalog.GamesFragment"
+        android:label="fragment_games"
+        tools:layout="@layout/fragment_games" >
+        <action
+            android:id="@+id/action_gamesFragment_to_addGameFragment"
+            app:destination="@id/addGameFragment" />
+        <action
+            android:id="@+id/action_gamesFragment_to_gameInfoFragment"
+            app:destination="@id/gameInfoFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <dialog
+        android:id="@+id/addManufacturerFragment"
+        android:name="com.example.gamecollectorscatalog.AddManufacturerFragment"
+        android:label="fragment_add_manufacturer"
+        tools:layout="@layout/fragment_add_manufacturer" >
+        <action
+            android:id="@+id/action_addManufacturerFragment_to_manufacturersFragment_add"
+            app:destination="@id/manufacturersFragment"
+            app:popUpTo="@id/manufacturersFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_addManufacturerFragment_to_manufacturersFragment_cancel"
+            app:destination="@id/manufacturersFragment"
+            app:popUpTo="@id/manufacturersFragment"
+            app:popUpToInclusive="true"/>
+    </dialog>
+    <dialog
+        android:id="@+id/addConsoleFragment"
+        android:name="com.example.gamecollectorscatalog.AddConsoleFragment"
+        android:label="fragment_add_console"
+        tools:layout="@layout/fragment_add_console" >
+        <action
+            android:id="@+id/action_addConsoleFragment_to_consolesFragment_add"
+            app:destination="@id/consolesFragment"
+            app:popUpTo="@id/consolesFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_addConsoleFragment_to_consolesFragment_cancel"
+            app:destination="@id/consolesFragment"
+            app:popUpTo="@id/consolesFragment"
+            app:popUpToInclusive="true"/>
+    </dialog>
+    <dialog
+        android:id="@+id/addGameFragment"
+        android:name="com.example.gamecollectorscatalog.AddGameFragment"
+        android:label="fragment_add_game"
+        tools:layout="@layout/fragment_add_game" >
+        <action
+            android:id="@+id/action_addGameFragment_to_gamesFragment_add"
+            app:destination="@id/gamesFragment"
+            app:popUpTo="@id/gamesFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_addGameFragment_to_gamesFragment_cancel"
+            app:destination="@id/gamesFragment"
+            app:popUpTo="@id/gamesFragment"
+            app:popUpToInclusive="true"/>
+    </dialog>
+    <fragment
+        android:id="@+id/gameInfoFragment"
+        android:name="com.example.gamecollectorscatalog.GameInfoFragment"
+        android:label="fragment_game_info"
+        tools:layout="@layout/fragment_game_info" />
+</navigation>
